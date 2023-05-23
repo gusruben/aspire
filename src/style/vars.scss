@@ -1,1 +1,19 @@
 @use "bulma/sass/utilities/all" as defaults;
+
+$family-primary: "Inria Sans";
+
+$scheme-main: #0d1b2d;
+$scheme-main-bis: rgba(defaults.findColorInvert($scheme-main), 0.05);
+
+$background: #F9F9F9;
+
+$text: #F9F9F9;
+$text-strong: #FFFFFF;
+$primary: #EE4865;
+$link: #EE4865;
+
+$border: rgba(defaults.findColorInvert($scheme-main), 0.25);
+
+// navbar
+$navbar-dropdown-item-hover-color: $text-strong;
+$navbar-dropdown-item-hover-background-color: $scheme-main-bis;
