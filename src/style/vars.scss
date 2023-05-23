@@ -2,18 +2,34 @@
 
 $family-primary: "Inria Sans";
 
-$scheme-main: #0d1b2d;
+$scheme-main: #F9F9F9;
 $scheme-main-bis: rgba(defaults.findColorInvert($scheme-main), 0.05);
 
-$background: #F9F9F9;
+$scheme-alt: #0d1b2d;
+$scheme-alt-bis: rgba(defaults.findColorInvert($scheme-alt), 0.05);
 
-$text: #F9F9F9;
-$text-strong: #FFFFFF;
+
+$text: $scheme-alt;
+$text-strong: #000000;
+$text-alt: #F9F9F9;
+$text-strong-alt: #FFFFFF;
+
 $primary: #EE4865;
+$primary-hover: #b51c36;
 $link: #EE4865;
+$link-hover: #b51c36;
 
 $border: rgba(defaults.findColorInvert($scheme-main), 0.25);
+$border-alt: rgba(defaults.findColorInvert($scheme-alt), 0.25);
 
 // navbar
-$navbar-dropdown-item-hover-color: $text-strong;
-$navbar-dropdown-item-hover-background-color: $scheme-main-bis;
+$navbar-background-color: $scheme-alt;
+$navbar-item-color: $text-alt;
+$navbar-dropdown-background-color: $scheme-alt;
+$navbar-dropdown-border-top: 2px solid $border-alt;
+$navbar-dropdown-item-hover-color: $text-strong-alt;
+$navbar-dropdown-item-hover-background-color: $scheme-alt-bis;
+
+// table
+$table-head-background-color: $primary;
+$table-head-cell-color: $text-strong-alt;
