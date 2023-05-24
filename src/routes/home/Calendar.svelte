@@ -28,8 +28,6 @@
     :global(.datepicker-nav) {
         display: none !important;
     }
-    // date display height: calc(2.5rem + 16px)
-    // weekday height: 1.5em + 0.6rem
 
     .calendar-readonly {
         display: inline-block;

@@ -18,6 +18,7 @@
 
 
 <style lang="scss">
+	@use "sass:math";
 	@import "bulma/sass/utilities/mixins";
 
 	.layout {
@@ -34,9 +35,10 @@
 
 		.sidebar {
 			max-width: $sidebar-width;
+			background-color: $scheme-alt;
 
 			> .calendar {
-				margin: 15px;
+				margin: math.div($sidebar-width - 320px, 2);
 			}
 		}
 	}
