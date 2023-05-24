@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Calendar from "./Calendar.svelte";
 	import ClassTable from "./ClassTable.svelte";
+	import DayStatus from "./DayStatus.svelte";
 	import Navbar from "./Navbar.svelte";
 </script>
 
@@ -10,6 +11,7 @@
 		<div class="calendar">
 			<Calendar />
 		</div>
+		<DayStatus day="B" period={3}/>
 	</div>
 	<div class="main">
 		<ClassTable />
