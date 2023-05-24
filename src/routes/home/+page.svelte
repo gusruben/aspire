@@ -39,6 +39,7 @@
 
 			> .calendar {
 				margin: math.div($sidebar-width - 320px, 2);
+				margin-top: 0.5em;
 			}
 		}
 	}
