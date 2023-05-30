@@ -21,6 +21,10 @@
         box-sizing: border-box;
         height: 3.25rem;
 
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+        z-index: 1;
+
         * {
             display: inline-block;
             color: $text-alt;

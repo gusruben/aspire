@@ -3,6 +3,52 @@
 	import ClassTable from "./ClassTable.svelte";
 	import DayStatus from "./DayStatus.svelte";
 	import Navbar from "./Navbar.svelte";
+	import PeriodStatus from "./PeriodStatus.svelte";
+	import type { Period as PeriodData } from "aspen-api/dist/types";
+
+	// dummy data
+	const periods: PeriodData[] = [
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: true
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+		{
+			name: "Science",
+			course: "", teacher: "", room: "",
+			currentPeriod: false
+		},
+	]
 </script>
 
 <Navbar />
@@ -12,6 +58,7 @@
 			<Calendar />
 		</div>
 		<DayStatus day="B" period={3}/>
+		<PeriodStatus {periods} />
 	</div>
 	<div class="main">
 		<ClassTable />
@@ -38,6 +85,12 @@
 		.sidebar {
 			max-width: $sidebar-width;
 			background-color: $scheme-alt;
+			// z-index: -1;
+			overflow: hidden;
+
+			display: flex;
+			flex-direction: column;
+			height: calc(100vh - 3.25rem);
 
 			> .calendar {
 				margin: math.div($sidebar-width - 320px, 2);
