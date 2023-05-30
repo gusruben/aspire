@@ -49,7 +49,7 @@
 		}
 
 		.sidebar {
-			@include tablet {
+			@include from($sidebar-width + $table-min-width) {
 				max-width: $sidebar-width;
 			}
 			background-color: $scheme-alt;

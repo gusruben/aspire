@@ -18,7 +18,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        @include tablet {
+        @include from($sidebar-width + $table-min-width) {
             max-width: $sidebar-width;
         }
 

@@ -12,3 +12,21 @@
     <td>{classData.grade} {classData.letterGrade}</td>
 </tr>
 
+<style lang="scss">
+	@import "bulma/sass/utilities/mixins";
+
+    // responsiveness
+
+    // hide email below widescreen
+    @include until-widescreen {
+        td:nth-child(4) {
+            display: none;
+        }
+    }
+    // hide course code on tablet & below
+    @include touch {
+        td:nth-child(2) {
+            display: none;
+        }
+    }
+</style>

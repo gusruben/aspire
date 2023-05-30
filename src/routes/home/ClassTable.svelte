@@ -23,6 +23,8 @@
 </table>
 
 <style lang="scss">
+	@import "bulma/sass/utilities/mixins";
+
     thead {
         outline: 2px solid $border-alt;
         outline-offset: -2px;
@@ -30,4 +32,20 @@
     table {
         border-bottom: 1px solid $border;
     }
+
+    // responsiveness
+
+    // hide email below widescreen
+    @include until-widescreen {
+        th:nth-child(4) {
+            display: none;
+        }
+    }
+    // hide course code on tablet & below
+    @include touch {
+        th:nth-child(2) {
+            display: none;
+        }
+    }
+    
 </style>
