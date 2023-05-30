@@ -1,12 +1,18 @@
 <script lang="ts">
     export let day: "A" | "B";
     export let period: number;
+
+    const inClass = period != -1;
 </script>
 
 <div id="day-status">
     <p class="day">{day}</p>
     <div class="separator"></div>
-    <p class="period">Period {period}</p>
+    {#if inClass}
+        <p class="period">Period {period}</p>
+    {:else}
+        <p class="period">Not in class</p>
+    {/if}
     <p class="time">{(new Date()).toLocaleTimeString()}</p>
 </div>
 

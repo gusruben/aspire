@@ -11,6 +11,10 @@
 	const schedule = data.schedule as Schedule;
 
 	const periods: PeriodData[] = schedule[schedule.currentDay as Day];
+
+	const days: Day[] = ["M", "T", "W", "Th", "F1", "F2"];
+	const currentDay = ["A", "B"][days.indexOf(schedule.currentDay as Day) % 2] as "A" | "B";
+	const currentPeriod = periods.findIndex(period => period.currentPeriod);
 </script>
 
 <Navbar />
@@ -19,7 +23,7 @@
 		<div class="calendar">
 			<Calendar />
 		</div>
-		<DayStatus day="B" period={3}/>
+		<DayStatus day={currentDay} period={currentPeriod}/>
 		<PeriodStatus {periods} />
 	</div>
 	<div class="main">
