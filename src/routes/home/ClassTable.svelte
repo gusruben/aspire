@@ -2,22 +2,7 @@
 	import type { ClassInfo } from "aspen-api/dist/types";
 	import Class from "./ClassRow.svelte";
 
-    // dummy class info
-    const testClass = {
-        token: "",
-        name: "Test Class",
-        course: "TC-001",
-        term: "Q1",
-        teacher: "Bar, Foo",
-        email: "foo.bar@example.com",
-        classroom: "123A",
-        letterGrade: "A",
-        grade: 98.1,
-        absent: 1,
-        tardy: 2,
-        dismissed: 3,
-    }
-    const classes: ClassInfo[] = Array(8).fill(testClass);
+    export let classes: ClassInfo[];
 </script>
 
 <table class="table is-fullwidth">

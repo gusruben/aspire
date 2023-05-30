@@ -4,51 +4,13 @@
 	import DayStatus from "./DayStatus.svelte";
 	import Navbar from "./Navbar.svelte";
 	import PeriodStatus from "./PeriodStatus.svelte";
-	import type { Period as PeriodData } from "aspen-api/dist/types";
+	import type { Day, Period as PeriodData, Schedule } from "aspen-api/dist/types";
 
-	// dummy data
-	const periods: PeriodData[] = [
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: true
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-		{
-			name: "Science",
-			course: "", teacher: "", room: "",
-			currentPeriod: false
-		},
-	]
+	export let data;
+
+	const schedule = data.schedule as Schedule;
+
+	const periods: PeriodData[] = schedule[schedule.currentDay as Day];
 </script>
 
 <Navbar />
@@ -61,7 +23,7 @@
 		<PeriodStatus {periods} />
 	</div>
 	<div class="main">
-		<ClassTable />
+		<ClassTable classes={data.classes}/>
 	</div>
 </div>
 
