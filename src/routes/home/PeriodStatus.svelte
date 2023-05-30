@@ -12,11 +12,15 @@
 </div>
 
 <style lang="scss">
+	@import "bulma/sass/utilities/mixins";
+    
     .period-status {
         position: relative;
         width: 100%;
         height: 100%;
-        max-width: $sidebar-width;
+        @include tablet {
+            max-width: $sidebar-width;
+        }
 
         overflow-y: auto;
         background-color: rgba($scheme-main, 0.95)

@@ -83,7 +83,9 @@
 		}
 
 		.sidebar {
-			max-width: $sidebar-width;
+			@include tablet {
+				max-width: $sidebar-width;
+			}
 			background-color: $scheme-alt;
 			// z-index: -1;
 			overflow: hidden;
