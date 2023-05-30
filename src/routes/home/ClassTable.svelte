@@ -3,50 +3,21 @@
 	import Class from "./ClassRow.svelte";
 
     // dummy class info
-    const classes: ClassInfo[] = [
-        {
-            token: "",
-            name: "Test Class",
-            course: "TC-001",
-            term: "Q1",
-            teacher: "Bar, Foo",
-            email: "foo.bar@example.com",
-            classroom: "123A",
-            letterGrade: "A",
-            grade: 98.1,
-            absent: 1,
-            tardy: 2,
-            dismissed: 3,
-        },
-        {
-            token: "",
-            name: "Test Class",
-            course: "TC-001",
-            term: "Q1",
-            teacher: "Bar, Foo",
-            email: "foo.bar@example.com",
-            classroom: "123A",
-            letterGrade: "A",
-            grade: 98.1,
-            absent: 1,
-            tardy: 2,
-            dismissed: 3,
-        },
-        {
-            token: "",
-            name: "Test Class",
-            course: "TC-001",
-            term: "Q1",
-            teacher: "Bar, Foo",
-            email: "foo.bar@example.com",
-            classroom: "123A",
-            letterGrade: "A",
-            grade: 98.1,
-            absent: 1,
-            tardy: 2,
-            dismissed: 3,
-        }
-    ]
+    const testClass = {
+        token: "",
+        name: "Test Class",
+        course: "TC-001",
+        term: "Q1",
+        teacher: "Bar, Foo",
+        email: "foo.bar@example.com",
+        classroom: "123A",
+        letterGrade: "A",
+        grade: 98.1,
+        absent: 1,
+        tardy: 2,
+        dismissed: 3,
+    }
+    const classes: ClassInfo[] = Array(8).fill(testClass);
 </script>
 
 <table class="table is-fullwidth">
@@ -65,3 +36,13 @@
         {/each}
     </tbody>
 </table>
+
+<style lang="scss">
+    thead {
+        outline: 2px solid $border-alt;
+        outline-offset: -2px;
+    }
+    table {
+        border-bottom: 1px solid $border;
+    }
+</style>
