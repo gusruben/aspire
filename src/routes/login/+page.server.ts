@@ -1,7 +1,7 @@
 import Aspen from 'aspen-api';
 import { users } from '../../stores';
 import crypto from 'crypto';
-import type { Actions } from '@sveltejs/kit';
+import { redirect, type Actions } from '@sveltejs/kit';
 
 export const actions: Actions = {
 	default: async ({ request, cookies }) => {
@@ -21,6 +21,7 @@ export const actions: Actions = {
 			return store;
 		})
 
-		cookies.set("session", sessionID)
+		cookies.set("session", sessionID);
+		throw redirect(302, "/home");
 	}
 };
