@@ -23,14 +23,13 @@
 		<div class="calendar">
 			<Calendar />
 		</div>
-		<DayStatus day={currentDay} period={currentPeriod}/>
+		<DayStatus day={currentDay} period={currentPeriod} />
 		<PeriodStatus {periods} />
 	</div>
 	<div class="main">
-		<ClassTable classes={data.classes}/>
+		<ClassTable classes={data.classes} />
 	</div>
 </div>
-
 
 <style lang="scss">
 	@use "sass:math";

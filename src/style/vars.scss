@@ -2,21 +2,20 @@
 
 $family-primary: "Inria Sans";
 
-$scheme-main: #F9F9F9;
+$scheme-main: #f9f9f9;
 $scheme-main-bis: rgba(defaults.findColorInvert($scheme-main), 0.05);
 
 $scheme-alt: #0d1b2d;
 $scheme-alt-bis: rgba(defaults.findColorInvert($scheme-alt), 0.05);
 
-
 $text: $scheme-alt;
 $text-strong: #000000;
-$text-alt: #F9F9F9;
-$text-strong-alt: #FFFFFF;
+$text-alt: #f9f9f9;
+$text-strong-alt: #ffffff;
 
-$primary: #EE4865;
+$primary: #ee4865;
 $primary-hover: #b51c36;
-$link: #EE4865;
+$link: #ee4865;
 $link-hover: #b51c36;
 
 $border: rgba(defaults.findColorInvert($scheme-main), 0.25);

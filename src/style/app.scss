@@ -1,11 +1,11 @@
-@import 'bulma/sass/utilities/_all';
-@import 'bulma/sass/base/_all';
-@import 'bulma/sass/elements/_all';
-@import 'bulma/sass/form/_all';
-@import 'bulma/sass/components/_all';
-@import 'bulma/sass/grid/_all';
-@import 'bulma/sass/helpers/_all';
-@import 'bulma/sass/layout/_all';
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/base/_all";
+@import "bulma/sass/elements/_all";
+@import "bulma/sass/form/_all";
+@import "bulma/sass/components/_all";
+@import "bulma/sass/grid/_all";
+@import "bulma/sass/helpers/_all";
+@import "bulma/sass/layout/_all";
 
 // bulma-calendar
 @import "bulma-calendar/src/sass/index";
@@ -13,22 +13,22 @@
 // these are some overrides for bulma-calendar, to make it more 'dynamic'
 // by default, there are some hard-coded colors which can't be controlled with variables
 .datetimepicker {
-    box-shadow: none;
-    background: transparent;
+	box-shadow: none;
+	background: transparent;
 
-    .datepicker-date {
-        background: transparent !important;
+	.datepicker-date {
+		background: transparent !important;
 
-        &:not(.is-current-month) button {
-            color: rgba(255, 255, 255, 0.5) !important;
-        }
+		&:not(.is-current-month) button {
+			color: rgba(255, 255, 255, 0.5) !important;
+		}
 
-        .is-today {
-            border: none !important;
-        }
-    }
+		.is-today {
+			border: none !important;
+		}
+	}
 
-    .datetimepicker-selection-month {
-        color: $text-alt !important;
-    }
+	.datetimepicker-selection-month {
+		color: $text-alt !important;
+	}
 }
