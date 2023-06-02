@@ -25,3 +25,8 @@ export const actions: Actions = {
 		throw redirect(302, "/home");
 	},
 };
+
+export function load({ cookies }) {
+	if (cookies.get("session"))
+		throw redirect(302, "/home");
+}
