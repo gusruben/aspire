@@ -1,15 +1,11 @@
 import { redirect } from "@sveltejs/kit";
-import { get } from "svelte/store";
-import { users } from "../../stores";
+import { getUser } from "../../lib/users";
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ cookies }) {
-	const sessionID = cookies.get("session") as string;
-	const userStore = get(users);
-
-	if (sessionID in userStore) {
-		const user = userStore[sessionID];
-
+	const user = getUser(cookies.get("session") as string)
+	
+	if (user) {
 		return {
 			classes: await user.getClasses(),
 			schedule: await user.getSchedule(),
