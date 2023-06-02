@@ -64,5 +64,9 @@
 				margin-top: 0.5em;
 			}
 		}
+
+		.main {
+			border-left: 1px solid $border;
+		}
 	}
 </style>
