@@ -8,7 +8,7 @@
 </script>
 
 <div class="period" class:isCurrent>
-	<p>
+	<p class="name">
 		{period.name}
 	</p>
 	<p class="time">{from} - {to}</p>
@@ -24,6 +24,13 @@
 		&.isCurrent {
 			font-weight: bold;
 			background-color: transparent;
+
+			.name {
+				max-width: calc(55% - 4rem);
+			}
+			.time {
+				max-width: 45%;
+			}
 		}
 
 		p {
@@ -31,11 +38,19 @@
 			line-height: 3.5rem;
 			margin: 0 1em;
 			width: max-content;
-			display: inline;
+			display: inline-block;
 		}
 		.time {
 			float: right;
-			margin-right: 2em;
+			max-width: 40%;
+		}
+
+		.name {
+			max-width: calc(60% - 4rem);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis; 
+			// -o-text-overflow: ellipsis;
 		}
 	}
 </style>
