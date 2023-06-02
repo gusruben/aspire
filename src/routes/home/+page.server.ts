@@ -4,15 +4,14 @@ import { getUser } from "../../lib/users";
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ cookies }) {
 	const user = getUser(cookies.get("session") as string)
-	
-	if (user) {
-		return {
-			classes: await user.getClasses(),
-			schedule: await user.getSchedule(),
-		};
-	} else {
+
+	if (!user) {
 		cookies.delete("session");
-		console.log("logged out");
 		throw redirect(302, "/login");
 	}
+
+	return {
+		classes: await user.getClasses(),
+		schedule: await user.getSchedule(),
+	};
 }
