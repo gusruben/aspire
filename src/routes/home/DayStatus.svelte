@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let day: "A" | "B";
-	export let period: number;
+	export let day: "A" | "B" | "X";
+	export let period: number | null;
 
-	const inClass = period != -1;
+	const inClass = period && period != -1;
 </script>
 
 <div id="day-status">

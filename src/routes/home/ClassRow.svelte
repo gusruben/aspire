@@ -2,9 +2,13 @@
 	import type { ClassInfo } from "aspen-api/dist/types";
 
 	export let classData: ClassInfo;
+
+	function visitClass() {
+		window.location.pathname = "/class/" + classData.token;
+	}
 </script>
 
-<tr>
+<tr on:click={visitClass}>
 	<td>{classData.name}</td>
 	<td>{classData.course}</td>
 	<td>{classData.teacher}</td>
@@ -28,5 +32,10 @@
 		td:nth-child(2) {
 			display: none;
 		}
+	}
+
+	tr:hover {
+		background-color: $scheme-main-bis;
+		cursor: pointer;
 	}
 </style>
