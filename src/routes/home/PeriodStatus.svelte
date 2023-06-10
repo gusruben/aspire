@@ -6,7 +6,7 @@
 </script>
 
 <div class="period-status">
-	{#each periods as period}
+	{#each (periods || []) as period}
 		<Period {period} from="9:00AM" to="10:22AM" />
 	{/each}
 </div>

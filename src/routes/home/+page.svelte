@@ -13,8 +13,20 @@
 	const periods: PeriodData[] = schedule[schedule.currentDay as Day];
 
 	const days: Day[] = ["M", "T", "W", "Th", "F1", "F2"];
-	const currentDay = ["A", "B"][days.indexOf(schedule.currentDay as Day) % 2] as "A" | "B";
-	const currentPeriod = periods.findIndex(period => period.currentPeriod);
+
+	let currentDay: "A" | "B" | "X";
+	if (periods) { // periods is null if it's not a school day
+		currentDay = ["A", "B"][days.indexOf(schedule.currentDay as Day) % 2] as "A" | "B";
+	} else {
+		currentDay = "X"; // x when it's a weekend or summer or whatever
+	}
+
+	let currentPeriod: number | null;
+	if (periods) { 
+		currentPeriod = periods.findIndex(period => period.currentPeriod);
+	} else {
+		currentPeriod = null;
+	}
 </script>
 
 <Navbar />
