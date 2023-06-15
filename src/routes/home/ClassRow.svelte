@@ -4,7 +4,7 @@
 	export let classData: ClassInfo;
 
 	function visitClass() {
-		window.location.pathname = "/class/" + classData.token;
+		window.location.pathname = "/home/" + classData.token;
 	}
 </script>
 
