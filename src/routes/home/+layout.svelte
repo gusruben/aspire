@@ -4,11 +4,11 @@
 	import DayStatus from "../../lib/DayStatus.svelte";
 	import Navbar from "../../lib/Navbar.svelte";
 	import PeriodStatus from "../../lib/PeriodStatus.svelte";
-	import type { Day, Period as PeriodData, Schedule } from "aspen-api/dist/types";
+	import type { Day, Period as PeriodData} from "aspen-api/dist/types";
 
 	export let data;
 
-	const schedule = data;
+	const schedule = data.schedule;
 
 	const periods: PeriodData[] = schedule[schedule.currentDay as Day];
 
@@ -32,7 +32,7 @@
 
 </script>
 
-<Navbar />
+<Navbar name={data.name}/>
 <div class="layout">
 	<div class="sidebar">
 		<div class="calendar">

@@ -1,3 +1,14 @@
+<script lang="ts">
+	export let name = ""; // student name
+
+	function logout() {
+		const form = document.getElementById("logout") as HTMLFormElement;
+		form.submit();
+	}
+</script>
+
+<form id="logout" action="?/logout" style="display: none" method="POST"/>
+
 <div class="navbar">
 	<div class="navbar-brand">
 		<a href="/" class="navbar-item">
@@ -15,11 +26,11 @@
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<a class="navbar-link">Last, First</a>
+				<a class="navbar-link">{name}</a>
 
 				<div class="navbar-dropdown is-right">
 					<!-- svelte-ignore a11y-missing-attribute -->
-					<a class="navbar-item">Log Out</a>
+					<a class="navbar-item" on:click={logout} on:keypress={logout}>Log Out</a>
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<a class="navbar-item">Settings</a>
 				</div>

@@ -10,5 +10,8 @@ export async function load({ cookies }) {
 		throw redirect(302, "/login");
 	}
 
-	return await user.getSchedule();
+	return {
+		schedule: await user.getSchedule(),
+		name: user.studentName,
+	};
 }
