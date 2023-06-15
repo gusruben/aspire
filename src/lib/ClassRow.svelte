@@ -4,6 +4,11 @@
 
 	export let classData: ClassInfo;
 
+	let grade = classData.grade.toString();
+	
+	if (grade.length == 2) grade += "."; // if it doesn't have a decimal point, add one
+    grade.padEnd(5, "0") // add '.00' etc
+
 	function visitClass() {
 		window.location.pathname = "/home/" + classData.token;
 	}
@@ -15,7 +20,7 @@
 	<td>{classData.teacher}</td>
 	<td><a href="mailto:{classData.email}">{classData.email}</a></td>
 	<td>
-		{classData.grade}
+		{grade}
 		<!-- use our own function because sometimes there is no letter grade -->
 		{letterGrade(classData.grade)}
 	</td>
