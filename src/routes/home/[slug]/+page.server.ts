@@ -13,7 +13,6 @@ export async function load({ cookies, params }) {
 
     try {
         return {
-            class: await user.getClass(params.slug),
             assignments: await user.getAssignments(params.slug),
         }
     } catch (e) {
