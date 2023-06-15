@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { getUser } from '../../../lib/users';
+import { getUser } from '../../../lib/utils';
 // for some reason, this only works with the full path
 import { AspenApiError } from '../../../../node_modules/aspen-api/dist/types.js';
 

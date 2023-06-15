@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ClassInfo } from "aspen-api/dist/types";
+	import { letterGrade } from "./utils";
 
 	export let classData: ClassInfo;
 
@@ -13,7 +14,11 @@
 	<td>{classData.course}</td>
 	<td>{classData.teacher}</td>
 	<td><a href="mailto:{classData.email}">{classData.email}</a></td>
-	<td>{classData.grade} {classData.letterGrade}</td>
+	<td>
+		{classData.grade}
+		<!-- use our own function because sometimes there is no letter grade -->
+		{letterGrade(classData.grade)}
+	</td>
 </tr>
 
 <style lang="scss">

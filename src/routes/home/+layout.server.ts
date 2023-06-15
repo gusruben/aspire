@@ -1,5 +1,5 @@
 import { redirect } from "@sveltejs/kit";
-import { getUser } from "../../lib/users";
+import { getUser } from "../../lib/utils";
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ cookies }) {
