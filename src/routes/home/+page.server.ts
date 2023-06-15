@@ -10,10 +10,7 @@ export async function load({ cookies }) {
 		throw redirect(302, "/login");
 	}
 
-    const classes = await user.getClasses();
-    console.log("a:", classes)
-
-	return {
-        classes: classes,
+    return {
+        classes: await user.getClasses(),
     }
 }

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Calendar from "./Calendar.svelte";
-	import ClassTable from "./ClassTable.svelte";
-	import DayStatus from "./DayStatus.svelte";
-	import Navbar from "./Navbar.svelte";
-	import PeriodStatus from "./PeriodStatus.svelte";
+	import Calendar from "../../lib/Calendar.svelte";
+	import ClassTable from "../../lib/ClassTable.svelte";
+	import DayStatus from "../../lib/DayStatus.svelte";
+	import Navbar from "../../lib/Navbar.svelte";
+	import PeriodStatus from "../../lib/PeriodStatus.svelte";
 	import type { Day, Period as PeriodData, Schedule } from "aspen-api/dist/types";
 
 	export let data;

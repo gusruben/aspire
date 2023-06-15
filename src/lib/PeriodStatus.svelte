@@ -1,6 +1,6 @@
-<script lang="ts">
-	import type { Period as PeriodData } from "aspen-api/dist/types";
+<script lang="ts">;
 	import Period from "./Period.svelte";
+	import type { Period as PeriodData } from "aspen-api/dist/types";
 
 	export let periods: PeriodData[];
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ClassTable from './ClassTable.svelte';
+	import ClassTable from '../../lib/ClassTable.svelte';
 
 	export let data;
 
