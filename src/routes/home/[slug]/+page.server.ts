@@ -11,9 +11,12 @@ export async function load({ cookies, params }) {
         throw redirect(302, "/login");
     }
 
+    const assignments = await user.getAssignments(params.slug);
+    console.log("Assignments:", assignments)
+
     try {
         return {
-            assignments: await user.getAssignments(params.slug),
+            assignments,
         }
     } catch (e) {
         // this will make it return the unknown class page, rather than an error

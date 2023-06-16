@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Calendar from "../../lib/Calendar.svelte";
-	import ClassTable from "../../lib/ClassTable.svelte";
 	import DayStatus from "../../lib/DayStatus.svelte";
 	import Navbar from "../../lib/Navbar.svelte";
 	import PeriodStatus from "../../lib/PeriodStatus.svelte";
@@ -28,7 +27,7 @@
 		currentPeriod = null;
 	}
 
-    console.log("\n\nCURRENT PERIOD:",currentPeriod);
+    // console.log("\n\nCURRENT PERIOD:",currentPeriod);
 
 </script>
 
